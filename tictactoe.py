@@ -1,23 +1,24 @@
 # Tic Tac Toe
+# Tic Tac Toe
 
 import random
+import os
 
 
-def drawBoard(board):
-    # This function prints out the board that it was passed.
+class Board():
+    def __init__(self):
+        self.cells = ['', '', '', '', '', '', '', '', '', '']
 
-    # "board" is a list of 10 strings representing the board (ignore index 0)
-    print('   |   |')
-    print(' ' + board[7] + ' | ' + board[8] + ' | ' + board[9])
-    print('   |   |')
-    print('-----------')
-    print('   |   |')
-    print(' ' + board[4] + ' | ' + board[5] + ' | ' + board[6])
-    print('   |   |')
-    print('-----------')
-    print('   |   |')
-    print(' ' + board[1] + ' | ' + board[2] + ' | ' + board[3])
-    print('   |   |')
+    def disp(self):
+        print(' %s | %s | %s |' % (self.cells[7], self.cells[8], self.cells[9]))
+        print('-----------')
+        print(' %s | %s | %s |' % (self.cells[4], self.cells[5], self.cells[6]))
+        print('-----------')
+        print(' %s | %s | %s |' % (self.cells[1], self.cells[2], self.cells[3]))
+
+
+board = Board()
+board.disp()
 
 
 def inputPlayerLetter():
